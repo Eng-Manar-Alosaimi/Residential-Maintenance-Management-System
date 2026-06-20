@@ -1,9 +1,9 @@
-Residential Maintenance Management System (RMMS)
+******Residential Maintenance Management System (RMMS)******
 A comprehensive system engineering, requirements specification, and data analysis project designed to enhance the operational efficiency of facility management and maintenance within residential communities.
 
 This repository showcases an end-to-end software engineering lifecycle approach—spanning from stakeholder identification and functional/non-functional requirements engineering to UML behavioral modeling and building a high-fidelity data analysis dashboard.
 
-Project Overview
+****Project Overview****
 The Residential Maintenance Management System is structured to optimize how maintenance requests are tracked, assigned, and evaluated.  
 The system bridges the communication gap between tenants, technicians, and property managers.
 
@@ -13,7 +13,7 @@ Technicians receive specialized schedules, log work progress, and submit complet
 
 Supervisors & Property Managers utilize centralized dashboard tools to analyze performance, track operational throughput, and control quality.
 
-Key System Features & Requirements
+****Key System Features & Requirements****
 1. Functional Requirements (FR) Breakdown
 User & Profile Management: Secure registration, authentication, and access limits based on distinct system roles (Resident, Technician, Supervisor, Property Manager).
 
@@ -30,7 +30,7 @@ Performance & Scalability: Sub‑3‑second page loads, support for concurrent u
 
 Security Constraints: Mandatory end‑to‑end data encryption for private user data/images alongside strict role‑based access control (RBAC).
 
-System Design & UML Modeling
+****System Design & UML Modeling****
 To ensure strict system compliance and correct logical flows, the platform architecture was formally modeled using standard UML conventions.
 
 Use Case Diagram
@@ -48,7 +48,7 @@ Captures dynamic object interactions when a resident submits a maintenance reque
 
 <img width="961" height="442" alt="image2 (3)" src="https://github.com/user-attachments/assets/c43cea48-cf22-4ae6-8e4d-b65dcc97209f" />
 
-Interactive Property Manager Dashboard
+****Interactive Property Manager Dashboard****
 An advanced dataset of 1,000 generated maintenance records was simulated to evaluate the operational performance of the system.
 
 Using this data, a high‑fidelity analytical dashboard was built to track critical KPIs in real time.
@@ -68,7 +68,7 @@ Workload Balancing: Technician task allocation tracking.
 
 The dashboard includes interactive slicers that dynamically filter all pivot tables and charts. All components are driven by a structured Excel backend.
 
-Repository Structure & Artifacts
+****Repository Structure & Artifacts****
 maintenance_requests.xlsx: Contains the optimized Excel dataset with 1,000 simulated rows, formulas, pivot tables, and charts.
 
 Residential_Maintenance_Management_System_Report: Contains the final formal software architecture and specifications documentation.
@@ -78,7 +78,7 @@ Complete System Engineering Report: Residential_Maintenance_Management_System_Re
 
 Data Model & Dashboard Backend: maintenance_requests.xlsx
 
-Engineering Tooling & Stack
+****Engineering Tooling & Stack****
 System Modeling & UML: Visual Paradigm
 
 Data Analysis & Dashboards: Microsoft Excel (Pivot Tables, Slicers, Dynamic Charts)
