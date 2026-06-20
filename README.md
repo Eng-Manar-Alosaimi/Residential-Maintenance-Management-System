@@ -1,84 +1,88 @@
-# Residential Maintenance Management System (RMMS)
+Residential Maintenance Management System (RMMS)
+A comprehensive system engineering, requirements specification, and data analysis project designed to enhance the operational efficiency of facility management and maintenance within residential communities.
 
-**A comprehensive system engineering, requirements specification, and data analysis project designed to enhance the operational efficiency of facility management and maintenance within residential communities**. 
+This repository showcases an end-to-end software engineering lifecycle approach—spanning from stakeholder identification and functional/non-functional requirements engineering to UML behavioral modeling and building a high-fidelity data analysis dashboard.
 
-***This repository showcases an end-to-end software engineering lifecycle approach—spanning from stakeholder identification and functional/non-functional requirements engineering to UML behavioral modeling and building a high-fidelity data analysis dashboard***
+Project Overview
+The Residential Maintenance Management System is structured to optimize how maintenance requests are tracked, assigned, and evaluated.  
+The system bridges the communication gap between tenants, technicians, and property managers.
 
----
+Residents can frictionlessly submit requests with required image/video evidence and track progress in real-time.
 
-##  Project Overview
-[cite_start]The Residential Maintenance Management System is structured to optimize how maintenance requests are tracked, assigned, and evaluated[cite: 99]. [cite_start]The system bridges the communication gap between tenants, technicians, and property managers[cite: 103]:
-* [cite_start]**Residents** can frictionlessly submit requests with required image/video evidence and track progress in real-time[cite: 100].
-* [cite_start]**Technicians** receive specialized schedules, log work progress, and submit completion data[cite: 101].
-* [cite_start]**Supervisors & Property Managers** utilize centralized dashboard tools to analyze performance, track operational throughput, and control quality[cite: 102].
+Technicians receive specialized schedules, log work progress, and submit completion data.
 
----
+Supervisors & Property Managers utilize centralized dashboard tools to analyze performance, track operational throughput, and control quality.
 
-##  Key System Features & Requirements
+Key System Features & Requirements
+1. Functional Requirements (FR) Breakdown
+User & Profile Management: Secure registration, authentication, and access limits based on distinct system roles (Resident, Technician, Supervisor, Property Manager).
 
-### 1. Functional Requirements (FR) Breakdown
-* [cite_start]**User & Profile Management:** Secure registration, authentication, and access limits based on distinct system roles (Resident, Technician, Supervisor, Property Manager)[cite: 111, 125].
-* [cite_start]**Request Submission Pipeline:** Unique tracking ID and timestamp generation per request with mandatory media attachments, urgency ratings, and service categorization[cite: 132, 136, 138].
-* [cite_start]**Live Status Tracking:** Real-time visibility into the lifecycle of a request (Open, In Progress, Closed) with automated instant notification triggers[cite: 143, 145].
-* [cite_start]**Resource Scheduling:** Database tracking of technician skills and availability with calendar view operations for supervisors[cite: 148, 152].
-* [cite_start]**Feedback Mechanism:** Aggregated resident ratings and comments post-completion for quality assurance and performance reviews[cite: 169, 171].
+Request Submission Pipeline: Unique tracking ID and timestamp generation per request with mandatory media attachments, urgency ratings, and service categorization.
 
-### 2. Non-Functional Requirements (NFR) High-level Targets
-* [cite_start]**Performance & Scalability:** Sub-3-second page loads [cite: 177][cite_start], support for concurrent users without lag [cite: 178][cite_start], and a decoupled **Media Service architecture** to offload image/video hosting and processing independently from the main server[cite: 200, 201].
-* [cite_start]**Security Constraints:** Mandatory end-to-end data encryption for private user data/images [cite: 189] [cite_start]alongside strict role-based access control (RBAC)[cite: 190].
+Live Status Tracking: Real-time visibility into the lifecycle of a request (Open, In Progress, Closed) with automated instant notification triggers.
 
----
+Resource Scheduling: Database tracking of technician skills and availability with calendar view operations for supervisors.
 
-##  System Design & UML Modeling
+Feedback Mechanism: Aggregated resident ratings and comments post-completion for quality assurance and performance reviews.
 
-[cite_start]To ensure strict system compliance and correct logical flows, the platform architecture was formally modeled using standard UML conventions:
+2. Non-Functional Requirements (NFR) High-level Targets
+Performance & Scalability: Sub‑3‑second page loads, support for concurrent users without lag, and a decoupled Media Service architecture for independent media processing.
 
-### Use Case Diagram
-[cite_start]Illustrates structural system boundaries, detailing how the user roles interact with key system functions (e.g., submitting requests, technician scheduling, and report generation)[cite: 206, 207].
+Security Constraints: Mandatory end‑to‑end data encryption for private user data/images alongside strict role‑based access control (RBAC).
+
+System Design & UML Modeling
+To ensure strict system compliance and correct logical flows, the platform architecture was formally modeled using standard UML conventions.
+
+Use Case Diagram
+Illustrates structural system boundaries and how user roles interact with key system functions (request submission, scheduling, reporting).
+
 <img width="588" height="1101" alt="image0 (5)" src="https://github.com/user-attachments/assets/247f8292-ad50-4a0d-b875-6b0d0b6a1b8f" />
 
+Class Diagram
+Represents the structural data blueprint of the system, defining core entities (Resident, MaintenanceRequest, MediaAttachment, Rating, Notification, Supervisor, PropertyManager) and their relationships.
 
-### Class Diagram
-[cite_start]Represents the structural data blueprint of the system, defining core entities (`Resident`, `MaintenanceRequest`, `MediaAttachment`, `Rating`, `Notification`, `Supervisor`, `PropertyManager`), their internal attributes, methods, and relationships[cite: 239].
 <img width="904" height="984" alt="image1 (3)" src="https://github.com/user-attachments/assets/c9052bd4-f225-4312-afce-61201082ac7f" />
 
-### Sequence Diagram
-[cite_start]Captures the dynamic object interactions and message passing sequence when a resident initiates and submits a maintenance request through the application interface to the media and assignment modules[cite: 281].
+Sequence Diagram
+Captures dynamic object interactions when a resident submits a maintenance request through the application interface.
+
 <img width="961" height="442" alt="image2 (3)" src="https://github.com/user-attachments/assets/c43cea48-cf22-4ae6-8e4d-b65dcc97209f" />
 
+Interactive Property Manager Dashboard
+An advanced dataset of 1,000 generated maintenance records was simulated to evaluate the operational performance of the system.
 
----
+Using this data, a high‑fidelity analytical dashboard was built to track critical KPIs in real time.
 
-## Interactive Property Manager Dashboard
-[cite_start]An advanced data engineering dataset consisting of **1,000 generated maintenance records** was simulated to validate and evaluate the operational performance of the proposed system architecture.
+Key Analytics Tracked
+Priority Metrics: High, medium, and low urgency categorization.
 
-[cite_start]Using this data, a high-fidelity, dynamic analytical dashboard was built to track critical Key Performance Indicators (KPIs) in real-time:
+Resolution Throughput: Task duration analysis by priority tier.
 
-### Key Analytics Tracked:
-* [cite_start]**Priority Metrics:** Categorization of high, medium, and low urgency items[cite: 312].
-* [cite_start]**Resolution Throughput:** Analysis of task duration based on priority tiers[cite: 312].
-* [cite_start]**Operational Volumes:** Distribution of request statuses (Closed, In Progress, Open)[cite: 312].
-* [cite_start]**Categorical Volume Analysis:** Tracking the most common issue types (e.g., Electrical, Elevator, General, Plumbing)[cite: 312].
-* [cite_start]**Workload Balancing:** Dynamic tracking of task allocations per technician to manage labor utilization[cite: 312].
+Operational Volumes: Distribution of request statuses (Closed, In Progress, Open).
+
+Categorical Volume Analysis: Most common issue types (Electrical, Elevator, General, Plumbing).
+
+Workload Balancing: Technician task allocation tracking.
+
 <img width="1855" height="617" alt="Screenshot 2026-06-20 071036" src="https://github.com/user-attachments/assets/102e63fe-845f-42ed-bf20-d404b1e43f04" />
 
-[cite_start]*The interactive dashboard features built-in **slicers by priority** that dynamically filter and adjust all associated pivot tables and charts simultaneously[cite: 312]. All components are completely driven by the underlying structured Microsoft Excel data backend.*
+The dashboard includes interactive slicers that dynamically filter all pivot tables and charts. All components are driven by a structured Excel backend.
 
----
+Repository Structure & Artifacts
+maintenance_requests.xlsx: Contains the optimized Excel dataset with 1,000 simulated rows, formulas, pivot tables, and charts.
 
-## Repository Structure & Artifacts
-* [cite_start]`/maintainance_requests.xlsx`: Contains the optimized Excel data file (`.xlsx`) featuring the 1,000 simulated maintenance rows, formulas, pivot tables, and charts[cite: 311, 312].
-* [cite_start]`/Residential_Maintenance_Management_System_Report`: Contains the final formal software architecture and specifications documentation.
+Residential_Maintenance_Management_System_Report: Contains the final formal software architecture and specifications documentation.
 
-### Direct File Links:
-* **Complete System Engineering Report:** [View Project Report PDF](Residential_Maintenance_Management_System_Report.pdf)
-* **Data Model & Dashboard Backend:** [View Excel Sheet Source](maintainance_requests.xlsx 
-)
+Direct File Links
+Complete System Engineering Report: Residential_Maintenance_Management_System_Report.pdf
 
----
+Data Model & Dashboard Backend: maintenance_requests.xlsx
 
-##  Engineering Tooling & Stack
-* [cite_start]**System Modeling & UML:** [Visual Paradigm (System Diagrams & Flowcharts)] 
-* [cite_start]**Data Analysis & Dashboards:** Microsoft Excel (Advanced Pivot Tables, Interactive Slicers, and Dynamic Charts) [cite: 312]
-* [cite_start]**Requirements Specification:** Microsoft Word / PDF Document Processor 
-* [cite_start]**Institution:** Taif University, College of Computer & Information Technology, Computer Engineering Department[cite: 91, 93].
+Engineering Tooling & Stack
+System Modeling & UML: Visual Paradigm
+
+Data Analysis & Dashboards: Microsoft Excel (Pivot Tables, Slicers, Dynamic Charts)
+
+Requirements Specification: Microsoft Word / PDF
+
+Institution: Taif University — College of Computer & Information Technology, Computer Engineering Department
