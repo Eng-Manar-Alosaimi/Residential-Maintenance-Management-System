@@ -1,8 +1,8 @@
 # Residential Maintenance Management System (RMMS)
 
-[cite_start]A comprehensive system engineering, requirements specification, and data analysis project designed to enhance the operational efficiency of facility management and maintenance within residential communities[cite: 94, 99]. 
+**A comprehensive system engineering, requirements specification, and data analysis project designed to enhance the operational efficiency of facility management and maintenance within residential communities**. 
 
-[cite_start]This repository showcases an end-to-end software engineering lifecycle approach—spanning from stakeholder identification and functional/non-functional requirements engineering to UML behavioral modeling and building a high-fidelity data analysis dashboard[cite: 104, 205, 311].
+***This repository showcases an end-to-end software engineering lifecycle approach—spanning from stakeholder identification and functional/non-functional requirements engineering to UML behavioral modeling and building a high-fidelity data analysis dashboard***
 
 ---
 
