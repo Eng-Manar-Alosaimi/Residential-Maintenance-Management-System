@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 [cite_start]The Residential Maintenance Management System is structured to optimize how maintenance requests are tracked, assigned, and evaluated[cite: 99]. [cite_start]The system bridges the communication gap between tenants, technicians, and property managers[cite: 103]:
 * [cite_start]**Residents** can frictionlessly submit requests with required image/video evidence and track progress in real-time[cite: 100].
 * [cite_start]**Technicians** receive specialized schedules, log work progress, and submit completion data[cite: 101].
@@ -14,7 +14,7 @@
 
 ---
 
-## 🚀 Key System Features & Requirements
+##  Key System Features & Requirements
 
 ### 1. Functional Requirements (FR) Breakdown
 * [cite_start]**User & Profile Management:** Secure registration, authentication, and access limits based on distinct system roles (Resident, Technician, Supervisor, Property Manager)[cite: 111, 125].
@@ -29,25 +29,27 @@
 
 ---
 
-## 🗺️ System Design & UML Modeling
+##  System Design & UML Modeling
 
 [cite_start]To ensure strict system compliance and correct logical flows, the platform architecture was formally modeled using standard UML conventions:
 
 ### Use Case Diagram
 [cite_start]Illustrates structural system boundaries, detailing how the user roles interact with key system functions (e.g., submitting requests, technician scheduling, and report generation)[cite: 206, 207].
-![Use Case Diagram](./images/use_case_diagram.png)
+<img width="588" height="1101" alt="image0 (5)" src="https://github.com/user-attachments/assets/247f8292-ad50-4a0d-b875-6b0d0b6a1b8f" />
+
 
 ### Class Diagram
 [cite_start]Represents the structural data blueprint of the system, defining core entities (`Resident`, `MaintenanceRequest`, `MediaAttachment`, `Rating`, `Notification`, `Supervisor`, `PropertyManager`), their internal attributes, methods, and relationships[cite: 239].
-![Class Diagram](./images/class_diagram.png)
+<img width="904" height="984" alt="image1 (3)" src="https://github.com/user-attachments/assets/c9052bd4-f225-4312-afce-61201082ac7f" />
 
 ### Sequence Diagram
 [cite_start]Captures the dynamic object interactions and message passing sequence when a resident initiates and submits a maintenance request through the application interface to the media and assignment modules[cite: 281].
-![Sequence Diagram](./images/sequence_diagram.png)
+<img width="961" height="442" alt="image2 (3)" src="https://github.com/user-attachments/assets/c43cea48-cf22-4ae6-8e4d-b65dcc97209f" />
+
 
 ---
 
-## 📈 Interactive Property Manager Dashboard
+## Interactive Property Manager Dashboard
 [cite_start]An advanced data engineering dataset consisting of **1,000 generated maintenance records** was simulated to validate and evaluate the operational performance of the proposed system architecture.
 
 [cite_start]Using this data, a high-fidelity, dynamic analytical dashboard was built to track critical Key Performance Indicators (KPIs) in real-time:
@@ -58,24 +60,24 @@
 * [cite_start]**Operational Volumes:** Distribution of request statuses (Closed, In Progress, Open)[cite: 312].
 * [cite_start]**Categorical Volume Analysis:** Tracking the most common issue types (e.g., Electrical, Elevator, General, Plumbing)[cite: 312].
 * [cite_start]**Workload Balancing:** Dynamic tracking of task allocations per technician to manage labor utilization[cite: 312].
+<img width="1855" height="617" alt="Screenshot 2026-06-20 071036" src="https://github.com/user-attachments/assets/102e63fe-845f-42ed-bf20-d404b1e43f04" />
 
-![Property Manager Dashboard](./images/dashboard_screenshot.png)
 [cite_start]*The interactive dashboard features built-in **slicers by priority** that dynamically filter and adjust all associated pivot tables and charts simultaneously[cite: 312]. All components are completely driven by the underlying structured Microsoft Excel data backend.*
 
 ---
 
-## 📂 Repository Structure & Artifacts
-* [cite_start]`/data/`: Contains the optimized Excel data file (`.xlsx`) featuring the 1,000 simulated maintenance rows, formulas, pivot tables, and charts[cite: 311, 312].
-* [cite_start]`/images/`: Houses the UML design models and dashboard visualizations used in this file[cite: 206, 239, 281].
-* [cite_start]`/reports/`: Contains the final formal software architecture and specifications documentation.
+## Repository Structure & Artifacts
+* [cite_start]`/maintainance_requests.xlsx`: Contains the optimized Excel data file (`.xlsx`) featuring the 1,000 simulated maintenance rows, formulas, pivot tables, and charts[cite: 311, 312].
+* [cite_start]`/Residential_Maintenance_Management_System_Report`: Contains the final formal software architecture and specifications documentation.
 
 ### Direct File Links:
-* **Complete System Engineering Report:** [View Project Report PDF](./reports/Residential_Maintenance_Management_System_Report.pdf)
-* **Data Model & Dashboard Backend:** [View Excel Sheet Source](./data/Maintenance_Data_Model.xlsx)
+* **Complete System Engineering Report:** [View Project Report PDF](Residential_Maintenance_Management_System_Report.pdf)
+* **Data Model & Dashboard Backend:** [View Excel Sheet Source](maintainance_requests.xlsx 
+)
 
 ---
 
-## 🧰 Engineering Tooling & Stack
+##  Engineering Tooling & Stack
 * [cite_start]**System Modeling & UML:** [Visual Paradigm (System Diagrams & Flowcharts)] 
 * [cite_start]**Data Analysis & Dashboards:** Microsoft Excel (Advanced Pivot Tables, Interactive Slicers, and Dynamic Charts) [cite: 312]
 * [cite_start]**Requirements Specification:** Microsoft Word / PDF Document Processor 
