@@ -1,88 +1,247 @@
-******Residential Maintenance Management System (RMMS)******
-A comprehensive system engineering, requirements specification, and data analysis project designed to enhance the operational efficiency of facility management and maintenance within residential communities.
+# Residential Maintenance Management System (RMMS)
 
-This repository showcases an end-to-end software engineering lifecycle approach—spanning from stakeholder identification and functional/non-functional requirements engineering to UML behavioral modeling and building a high-fidelity data analysis dashboard.
+A comprehensive software engineering, requirements specification, and data analysis project designed to enhance the operational efficiency of facility management and maintenance within residential communities.
 
-****Project Overview****
-The Residential Maintenance Management System is structured to optimize how maintenance requests are tracked, assigned, and evaluated.  
-The system bridges the communication gap between tenants, technicians, and property managers.
+This repository demonstrates an end-to-end software engineering lifecycle approach, spanning stakeholder identification, requirements engineering, UML modeling, and interactive dashboard development.
 
-Residents can frictionlessly submit requests with required image/video evidence and track progress in real-time.
+---
 
-Technicians receive specialized schedules, log work progress, and submit completion data.
+## Project Deliverables
 
-Supervisors & Property Managers utilize centralized dashboard tools to analyze performance, track operational throughput, and control quality.
+- Software Requirements Specification (SRS)
+- UML Diagrams
+- Simulated Maintenance Dataset
+- Interactive Management Dashboard
+- Final Project Report
 
-****Key System Features & Requirements****
-1. Functional Requirements (FR) Breakdown
-User & Profile Management: Secure registration, authentication, and access limits based on distinct system roles (Resident, Technician, Supervisor, Property Manager).
+---
 
-Request Submission Pipeline: Unique tracking ID and timestamp generation per request with mandatory media attachments, urgency ratings, and service categorization.
+## Project Overview
 
-Live Status Tracking: Real-time visibility into the lifecycle of a request (Open, In Progress, Closed) with automated instant notification triggers.
+The Residential Maintenance Management System (RMMS) is designed to optimize how maintenance requests are submitted, assigned, tracked, and evaluated.
 
-Resource Scheduling: Database tracking of technician skills and availability with calendar view operations for supervisors.
+The system improves communication and coordination between residents, technicians, supervisors, and property managers.
 
-Feedback Mechanism: Aggregated resident ratings and comments post-completion for quality assurance and performance reviews.
+### Residents
 
-2. Non-Functional Requirements (NFR) High-level Targets
-Performance & Scalability: Sub‑3‑second page loads, support for concurrent users without lag, and a decoupled Media Service architecture for independent media processing.
+- Submit maintenance requests with image and video attachments.
+- Specify urgency levels and service categories.
+- Track request progress in real time.
+- Provide feedback after service completion.
 
-Security Constraints: Mandatory end‑to‑end data encryption for private user data/images alongside strict role‑based access control (RBAC).
+### Technicians
 
-****System Design & UML Modeling****
-To ensure strict system compliance and correct logical flows, the platform architecture was formally modeled using standard UML conventions.
+- Receive assigned maintenance tasks.
+- Manage schedules and assigned workloads.
+- Update work progress throughout task execution.
+- Submit completion reports and service updates.
 
-Use Case Diagram
-Illustrates structural system boundaries and how user roles interact with key system functions (request submission, scheduling, reporting).
+### Supervisors and Property Managers
+
+- Monitor maintenance operations through centralized dashboards.
+- Track technician performance and workload distribution.
+- Analyze maintenance trends and operational metrics.
+- Support decision-making using real-time analytics.
+
+---
+
+## Key System Features and Requirements
+
+### Functional Requirements
+
+#### User and Profile Management
+
+- Secure registration and authentication.
+- Role-based access control.
+- Profile management for all system roles.
+
+#### Maintenance Request Management
+
+- Automatic request ID generation.
+- Timestamp recording.
+- Media attachment support.
+- Priority and category assignment.
+
+#### Request Tracking
+
+- Real-time status monitoring.
+- Automated notifications.
+- Complete request lifecycle visibility.
+
+#### Resource Scheduling
+
+- Technician skill and availability tracking.
+- Supervisor scheduling interface.
+- Calendar-based task management.
+
+#### Feedback and Evaluation
+
+- Resident ratings and comments.
+- Performance monitoring.
+- Quality assurance support.
+
+### Non-Functional Requirements
+
+#### Performance and Scalability
+
+- Page load times below three seconds.
+- Support for concurrent users.
+- Scalable architecture capable of handling future growth.
+
+#### Media Service Architecture
+
+- Independent image and video hosting.
+- Reduced workload on the primary application server.
+
+#### Security
+
+- Data encryption for sensitive information and media.
+- Secure authentication mechanisms.
+- Role-Based Access Control (RBAC).
+
+---
+
+## System Design and UML Modeling
+
+To ensure system correctness and compliance with the specified requirements, the platform was modeled using standard UML methodologies.
+
+### Use Case Diagram
+
+Illustrates system boundaries and interactions between user roles and major functionalities such as request submission, technician scheduling, and reporting.
 
 <img width="588" height="1101" alt="image0 (5)" src="https://github.com/user-attachments/assets/247f8292-ad50-4a0d-b875-6b0d0b6a1b8f" />
 
-Class Diagram
-Represents the structural data blueprint of the system, defining core entities (Resident, MaintenanceRequest, MediaAttachment, Rating, Notification, Supervisor, PropertyManager) and their relationships.
+---
+
+### Class Diagram
+
+Represents the structural blueprint of the system, defining core entities, attributes, methods, and relationships.
+
+Key entities include:
+
+- Resident
+- MaintenanceRequest
+- MediaAttachment
+- Rating
+- Notification
+- Supervisor
+- PropertyManager
 
 <img width="904" height="984" alt="image1 (3)" src="https://github.com/user-attachments/assets/c9052bd4-f225-4312-afce-61201082ac7f" />
 
-Sequence Diagram
-Captures dynamic object interactions when a resident submits a maintenance request through the application interface.
+---
+
+### Sequence Diagram
+
+Captures the sequence of interactions involved when a resident submits a maintenance request through the application.
 
 <img width="961" height="442" alt="image2 (3)" src="https://github.com/user-attachments/assets/c43cea48-cf22-4ae6-8e4d-b65dcc97209f" />
 
-****Interactive Property Manager Dashboard****
-An advanced dataset of 1,000 generated maintenance records was simulated to evaluate the operational performance of the system.
+---
 
-Using this data, a high‑fidelity analytical dashboard was built to track critical KPIs in real time.
+## Interactive Property Manager Dashboard
 
-Key Analytics Tracked
-Priority Metrics: High, medium, and low urgency categorization.
+A dataset consisting of **1,000 simulated maintenance records** was generated to evaluate the proposed system architecture and support operational analysis.
 
-Resolution Throughput: Task duration analysis by priority tier.
+Using this dataset, an interactive dashboard was developed to monitor key performance indicators and maintenance operations.
 
-Operational Volumes: Distribution of request statuses (Closed, In Progress, Open).
+### Key Analytics
 
-Categorical Volume Analysis: Most common issue types (Electrical, Elevator, General, Plumbing).
+#### Priority Distribution
 
-Workload Balancing: Technician task allocation tracking.
+- High Priority
+- Medium Priority
+- Low Priority
+
+#### Resolution Performance
+
+- Task completion time analysis.
+- Resolution performance by priority level.
+
+#### Request Status Distribution
+
+- Open
+- In Progress
+- Closed
+
+#### Maintenance Category Analysis
+
+- Electrical
+- Plumbing
+- Elevator
+- General Maintenance
+
+#### Workload Distribution
+
+- Technician task allocation.
+- Resource utilization monitoring.
 
 <img width="1855" height="617" alt="Screenshot 2026-06-20 071036" src="https://github.com/user-attachments/assets/102e63fe-845f-42ed-bf20-d404b1e43f04" />
 
-The dashboard includes interactive slicers that dynamically filter all pivot tables and charts. All components are driven by a structured Excel backend.
+The dashboard includes interactive slicers that dynamically update charts and pivot tables based on selected criteria.
 
-****Repository Structure & Artifacts****
-maintenance_requests.xlsx: Contains the optimized Excel dataset with 1,000 simulated rows, formulas, pivot tables, and charts.
+---
 
-Residential_Maintenance_Management_System_Report: Contains the final formal software architecture and specifications documentation.
+## Repository Structure
 
-Direct File Links
-Complete System Engineering Report: Residential_Maintenance_Management_System_Report.pdf
+```text
+RMMS/
+│
+├── maintainance_requests.xlsx
+├── Residential_Maintenance_Management_System_Report.pdf
+└── README.md
+```
 
-Data Model & Dashboard Backend: maintenance_requests.xlsx
+---
 
-****Engineering Tooling & Stack****
-System Modeling & UML: Visual Paradigm
+## Included Artifacts
 
-Data Analysis & Dashboards: Microsoft Excel (Pivot Tables, Slicers, Dynamic Charts)
+### `maintainance_requests.xlsx`
 
-Requirements Specification: Microsoft Word / PDF
+Contains:
 
-Institution: Taif University — College of Computer & Information Technology, Computer Engineering Department
+- 1,000 simulated maintenance records.
+- Pivot tables and formulas.
+- Interactive slicers.
+- Dynamic charts and dashboard visualizations.
+
+### `Residential_Maintenance_Management_System_Report.pdf`
+
+Contains:
+
+- System requirements specification.
+- UML diagrams.
+- System architecture documentation.
+- Design and analysis artifacts.
+
+---
+
+## Direct File Links
+
+### Complete System Engineering Report
+
+[View Project Report PDF](Residential_Maintenance_Management_System_Report.pdf)
+
+### Data Model and Dashboard Backend
+
+[View Excel Sheet Source](maintainance_requests.xlsx)
+
+---
+
+## Tools and Technologies
+
+| Category | Tool |
+|-----------|------|
+| System Modeling and UML | Visual Paradigm |
+| Data Analysis and Dashboards | Microsoft Excel |
+| Dashboard Development | Pivot Tables, Charts, and Interactive Slicers |
+| Requirements Specification | Microsoft Word and PDF Documentation |
+| Software Engineering | Requirements Engineering and System Design |
+
+---
+
+## Academic Information
+
+**Taif University**  
+**College of Computer and Information Technology**  
+**Computer Engineering Department**
