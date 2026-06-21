@@ -1,4 +1,4 @@
-# Residential Maintenance Management System (RMMS)
+# Residential Maintenance Management System 
 
 A comprehensive software engineering, requirements specification, and data analysis project designed to enhance the operational efficiency of facility management and maintenance within residential communities.
 
